@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
+
+body {
+  font-family: "Roboto";
+  text-align: center;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat";
+}
+
+
+.navbar {
+  padding: 0 0 4.5rem;
+}
+.navbar-brand {
+  font-family: "Ubuntu";
+  padding: 2% 2%;
+}
+.nav-item {
+  padding: 0 18px;
+  font-family: 'Titillium Web';
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+.nav-item * {
+  box-sizing: border-box;
+  transition: all .35s ease;
+}
+
+.nav-item li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: .5em 1em;
+  paddin: 0;
+}
+
+.nav-item a {
+  padding: .5em .8em;
+  color: rgba(255,255,255,.5);
+  position: relative;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav-item a::before,
+.nav-item a::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+
+.nav-item a::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 3px solid #404258;
+  border-right: 3px solid #474E68;
+  transform: translate(-100%, 50%);
+}
+
+.nav-item a:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #404258;
+  border-left: 3px solid #474E68;
+  transform: translate(100%, -50%)
+}
+
+.nav-item a:hover:before,
+.nav-item a:hover:after{
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+.nav-item a:hover {
+  color: #3DA35D;
+}
+
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Ubuntu";
+}
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+#home {
+  background-color: #89C4E1;
+  color: #FFFFFF;
+  text-align: left;
+  font-size: 1.2rem;
+}
+#home .heading {
+  padding: 3% 7% 7%;
+}
+.big-heading {
+  font-family: "Montserrat";
+  font-weight: bold;
+  color: #EEEEEE;
+  font-size: 3.7rem;
+  line-height: 1.2;
+  padding: 1.5%;
+}
+.title-image {
+  width: 55%;
+  transform: rotate(25deg);
+  position: absolute;
+  left: 40%;
+}
+
+
+.section2 {
+  background-color: #F7F7F7;
+  position: relative;
+}
+.icon {
+  width: 50%;
+  margin: 20px;
+}
+.info-title {
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+.changebox
+{
+  padding: 3% 3%;
+}
+.info-box {
+  padding: 4.5%;
+}
+
+#features {
+  background-color: #F7F7F7;
+  position: relative;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 5% 5%;
+}
+.iconstyle {
+  font-size: 4rem;
+  color: #495579;
+}
+.wow {
+  padding: 4% 4%;
+}
+
+#about {
+  background-color: #89C4E1;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 3% 3%;
+  color: #FFFFFF;
+}
+.carousel-inner {
+  color: #EEEEEE;
+}
+#screenshot {
+  background-color: #89C4E1;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 3% 3%;
+  color: #FFFFFF;
+}
+.screenshots {
+  width: 25%;
+  margin: 50px;
+}
+
+
+
+.testimonial-text {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+.imageset {
+  width: 80%;
+  margin: 20px;
+}
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+#contact {
+  background-color: #F7F7F7;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 3% 3%;
+}
+#footer {
+  background-color: #3C5186;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 2% 2%;
+}
+.social-icon {
+  margin: 20px 10px;
+}
+
+@media (max-width: 1028px) {
+
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    transform: rotate(0);
+  }
+
+  .screenshots {
+    width: 70%;
+  }
+
+  .testimonial-image {
+    width: 35%;
+    border-radius: 100%;
+    margin: 20px;
+  }
+
+  .icon {
+    width: 40%;
+    margin: 20px;
+  }
+
+}
